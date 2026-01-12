@@ -1,5 +1,213 @@
 // Colorful Smoke Cursor Effect
 document.addEventListener('DOMContentLoaded', () => {
+    // --- TRANSLATION CONFIGURATION ---
+    const translations = {
+        "nav_home": { "id": "Beranda", "en": "Home" },
+        "nav_projects": { "id": "Proyek", "en": "Projects" },
+        "nav_experience": { "id": "Pengalaman", "en": "Experience" },
+        "nav_about": { "id": "Tentang", "en": "About" },
+        "nav_contact": { "id": "Kontak", "en": "Contact" },
+        "hero_greeting": { "id": "Halo, Saya", "en": "Hi, I'm" },
+        "hero_role_prefix": { "id": "Saya seorang", "en": "I am a" },
+        "hero_desc": { "id": "Membangun pengalaman digital yang mulus dengan teknologi modern. Bersemangat menciptakan solusi web yang bersih, efisien, dan berpusat pada pengguna.", "en": "Building seamless digital experiences with modern technologies. Passionate about creating clean, efficient, and user-centric web solutions." },
+        "hero_btn_projects": { "id": "Lihat Proyek", "en": "View Projects" },
+        "hero_btn_contact": { "id": "Hubungi Saya", "en": "Contact Me" },
+        "about_title": { "id": "Tentang Saya", "en": "About Me" },
+        "about_journey_title": { "id": "Perjalanan Menjadi Developer", "en": "My Journey as a Developer" },
+        "about_desc_1": {
+            "id": 'Saya adalah <span class="font-semibold text-slate-800 dark:text-white">Ronaldo Eka Putra Wabang</span>, lulusan D3 Teknik Komputer dan Jaringan dari <span class="font-semibold text-slate-800 dark:text-white">Politeknik Negeri Kupang</span>.',
+            "en": 'I am <span class="font-semibold text-slate-800 dark:text-white">Ronaldo Eka Putra Wabang</span>, a D3 graduate in Computer Engineering and Networking from <span class="font-semibold text-slate-800 dark:text-white">Kupang State Polytechnic</span>.'
+        },
+        "about_desc_2": {
+            "id": "Saya memiliki pengalaman profesional yang mencakup pengembangan web menggunakan teknologi seperti HTML, CSS, JavaScript, PHP, MySQL, dan Laravel, Codeigniter, React, Node.js, Next.js, Ruby On Rails serta keahlian dalam IT support, pemecahan masalah teknis, dan pemeliharaan jaringan.",
+            "en": "I have professional experience covering web development using technologies such as HTML, CSS, JavaScript, PHP, MySQL, and Laravel, Codeigniter, React, Node.js, Next.js, Ruby On Rails as well as expertise in IT support, technical troubleshooting, and network maintenance."
+        },
+        "about_tech_stack": { "id": "Tech Stack & Tools", "en": "Tech Stack & Tools" },
+        "about_it_ops": { "id": "IT Operations & Support", "en": "IT Operations & Support" },
+        "tech_os": { "id": "Instalasi OS", "en": "OS Installation" },
+        "tech_network": { "id": "Instalasi Jaringan & T-Shoot", "en": "Network Install & T-Shoot" },
+        "tech_service": { "id": "Servis Laptop/HP", "en": "Laptop/Mobile Repair" },
+        "flip_bio_title": { "id": "Biodata", "en": "Bio" },
+        "flip_age_label": { "id": "Umur: ", "en": "Age: " },
+        "flip_age_val": { "id": "25 Tahun", "en": "25 Years Old" },
+        "flip_loc_label": { "id": "Domisili: ", "en": "Location: " },
+        "flip_loc_val": { "id": "Jawa Barat, Indonesia", "en": "West Java, Indonesia" },
+        "flip_status_label": { "id": "Status: ", "en": "Status: " },
+        "projects_title": { "id": "Proyek Saya", "en": "My Projects" },
+        // Project 1
+        "project_1_title": { "id": "Sistem E-Learning SMK N 5 Kupang", "en": "SMK N 5 Kupang E-Learning System" },
+        "project_1_desc": { "id": "Platform E-Learning untuk mendukung proses pembelajaran digital, mencakup manajemen materi, pengumpulan tugas, dan fitur interaksi antara guru dan siswa.", "en": "E-Learning platform to support digital learning processes, including material management, assignment submission, and interaction features between teachers and students." },
+        // Project 2
+        "project_2_title": { "id": "Sistem Monitoring GMIT Center", "en": "GMIT Center Monitoring System" },
+        "project_2_desc": { "id": "Sistem berbasis web untuk memonitor dan melaporkan pengelolaan Amplop Janji Iman secara real-time. Fitur mencakup pelacakan kontribusi dan rekap otomatis.", "en": "Web-based system for real-time monitoring and reporting of Faith Promise Envelope management. Features include contribution tracking and automatic recapitulation." },
+        // Project 3
+        "project_3_title": { "id": "Dashboard KEPPK", "en": "KEPPK Dashboard" },
+        "project_3_desc": { "id": "Platform terintegrasi untuk pengajuan, review, dan persetujuan dokumen penelitian oleh Komite Etik. Menggunakan arsitektur modern untuk performa tinggi.", "en": "Integrated platform for submission, review, and approval of research documents by the Ethics Committee. Uses modern architecture for high performance." },
+        // Project 4
+        "project_4_title": { "id": "Sistem Informasi Pasien Puskesmas (E-ilogo)", "en": "Puskesmas Patient Information System (E-ilogo)" },
+        "project_4_desc": { "id": "Aplikasi manajemen data pasien digital yang dirancang untuk mempercepat proses administrasi di Puskesmas. Meminimalisir kesalahan input dan mempercepat pencarian riwayat medis.", "en": "Digital patient data management application designed to accelerate administrative processes at Community Health Centers. Minimizes input errors and speeds up medical history retrieval." },
+        // Project 5
+        "project_5_title": { "id": "SIMANTAP (Sistem Informasi Kelurahan)", "en": "SIMANTAP (Village Information System)" },
+        "project_5_desc": { "id": "Platform pelayanan publik tingkat kelurahan yang interaktif dan real-time. Menggunakan stack TALL untuk pengalaman pengguna yang responsif (SPA).", "en": "Interactive and real-time public service platform at the village level. Uses the TALL stack for a responsive user experience (SPA)." },
+        // Project 6
+        "project_6_title": { "id": "SAIFUL (Pencarian Lapangan Futsal)", "en": "SAIFUL (Futsal Field Finder)" },
+        "project_6_desc": { "id": "Solusi digital untuk mempermudah pecinta olahraga dalam menemukan dan memesan lapangan futsal. Sistem booking dan galeri fasilitas.", "en": "Digital solution to facilitate sports enthusiasts in finding and booking futsal fields. Booking system and facility gallery." },
+        // Project 7
+        "project_7_title": { "id": "SI Bebas Perpus", "en": "Library Clearance System" },
+        "project_7_desc": { "id": "Aplikasi validasi status peminjaman buku mahasiswa sebagai syarat kelulusan. Otomatisasi pengecekan tunggakan dan cetak surat bebas pustaka.", "en": "Application for validating student book loan status as a graduation requirement. Automates arrears checking and printing of library clearance letters." },
+
+        "exp_title": { "id": "Pengalaman Kerja", "en": "Work Experience" },
+        // Exp 1
+        "exp_1_date": { "id": "Mar 2020 - Sekarang", "en": "Mar 2020 - Present" },
+        "exp_1_role": { "id": "Full Stack Web Developer", "en": "Full Stack Web Developer" },
+        "exp_1_type": { "id": "Freelance", "en": "Freelance" },
+        "exp_1_desc_1": { "id": "Mengembangkan website full stack (React, Laravel, Next.js).", "en": "Developing full stack websites (React, Laravel, Next.js)." },
+        "exp_1_desc_2": { "id": "Maintenance, debugging, dan optimisasi performa.", "en": "Maintenance, debugging, and performance optimization." },
+        "exp_1_desc_3": { "id": "Komunikasi klien & manajemen proyek.", "en": "Client communication & project management." },
+        // Exp 2
+        "exp_2_date": { "id": "Juni 2025 - Nov 2025", "en": "June 2025 - Nov 2025" },
+        "exp_2_role": { "id": "BNI Sales Generalis", "en": "BNI General Sales" },
+        "exp_2_desc_1": { "id": "Akuisisi nasabah baru & penjualan produk perbankan.", "en": "New customer acquisition & banking product sales." },
+        "exp_2_desc_2": { "id": "Verifikasi dokumen & pendampingan nasabah.", "en": "Document verification & customer assistance." },
+        "exp_2_desc_3": { "id": "Pencapaian target penjualan bulanan.", "en": "Achieving monthly sales targets." },
+        // Exp 3
+        "exp_3_date": { "id": "Okt 2024 - Apr 2025", "en": "Oct 2024 - Apr 2025" },
+        "exp_3_role": { "id": "IT Event Tes CPNS", "en": "IT Event CPNS Test" },
+        "exp_3_desc_1": { "id": "Troubleshooting PC, jaringan & sistem ujian.", "en": "Troubleshooting PCs, networks & exam systems." },
+        "exp_3_desc_2": { "id": "Instalasi server, router, switch.", "en": "Installation of servers, routers, switches." },
+        "exp_3_desc_3": { "id": "Monitoring keamanan sistem & jaringan.", "en": "System & network security monitoring." },
+        // Exp 4
+        "exp_4_date": { "id": "Mei 2024 - Agu 2024", "en": "May 2024 - Aug 2024" },
+        "exp_4_role": { "id": "Outlet Supervisor", "en": "Outlet Supervisor" },
+        "exp_4_desc_1": { "id": "Manajemen staf, stok & operasional outlet.", "en": "Staff, stock & outlet operations management." },
+        "exp_4_desc_2": { "id": "Memastikan standar pelayanan toko.", "en": "Ensuring store service standards." },
+        "exp_4_desc_3": { "id": "Pelaporan penjualan & inventaris.", "en": "Sales & inventory reporting." },
+        // Exp 5
+        "exp_5_date": { "id": "Agu 2016 - Nov 2016", "en": "Aug 2016 - Nov 2016" },
+        "exp_5_role": { "id": "Intern / Magang", "en": "Intern" },
+        "exp_5_desc_1": { "id": "Operasional peralatan broadcast/switcher.", "en": "Broadcast equipment/switcher operations." },
+        "exp_5_desc_2": { "id": "Koordinasi produksi siaran live.", "en": "Live broadcast production coordination." },
+        "exp_5_desc_3": { "id": "Support teknis lapangan (shooting dsb).", "en": "Field technical support (shooting etc)." },
+
+        "edu_title": { "id": "Riwayat Pendidikan", "en": "Education History" },
+        "edu_desc": { "id": "Perjalanan akademik saya dari awal hingga menjadi Engineer.", "en": "My academic journey from the beginning to becoming an Engineer." },
+        // Edu 1
+        "edu_1_level": { "id": "Perguruan Tinggi", "en": "College" },
+        "edu_1_school": { "id": "Politeknik Negeri Kupang", "en": "Kupang State Polytechnic" },
+        "edu_1_major": { "id": "Prodi Teknik Komputer dan Jaringan", "en": "Computer Engineering and Networking" },
+        "edu_1_desc": { "id": "Fokus pada jaringan komputer, sistem operasi, dan pengembangan web dasar.", "en": "Focused on computer networking, operating systems, and basic web development." },
+        "edu_1_ipk_label": { "id": "IPK Akhir", "en": "Final GPA" },
+        "edu_1_hover_desc": { "id": "Fokus pada Teknik Komputer & Jaringan.", "en": "Focus on Computer Engineering & Networking." },
+        "edu_1_float_level": { "id": "D3 Teknik Elektro", "en": "D3 Electrical Engineering" },
+
+        // Edu 2
+        "edu_2_level": { "id": "SMK (Multimedia)", "en": "Vocational High School (Multimedia)" },
+        "edu_2_school": { "id": "SMK Negeri 5 Kupang", "en": "SMK Negeri 5 Kupang" },
+        "edu_2_desc": { "id": "Jurusan Multimedia. Mendalami desain grafis, editing video, dan animasi dasar.", "en": "Multimedia Major. Delved into graphic design, video editing, and basic animation." },
+        "edu_2_score_label": { "id": "Nilai Ujian", "en": "Exam Score" },
+        "edu_2_hover_desc": { "id": "Jurusan Multimedia, Desain Grafis & Video Editing.", "en": "Multimedia, Graphic Design & Video Editing Major." },
+        "edu_2_float_level": { "id": "SMK (Multimedia)", "en": "Vocational School (Multimedia)" },
+
+        // Edu 3
+        "edu_3_level": { "id": "SMP", "en": "Junior High School" },
+        "edu_3_school": { "id": "SMP N 6 Kupang", "en": "SMP N 6 Kupang" },
+        "edu_3_desc": { "id": "Aktif dalam kegiatan ekstrakurikuler dan organisasi sekolah.", "en": "Active in extracurricular activities and school organizations." },
+        "edu_3_status_label": { "id": "Status", "en": "Status" },
+        "edu_3_status_val": { "id": "Lulus", "en": "Graduated" },
+        "edu_3_hover_desc": { "id": "Aktif dalam Pramuka dan OSIS.", "en": "Active in Scouts and Student Council." },
+        "edu_3_float_level": { "id": "SMP", "en": "Junior High" },
+
+        // Edu 4
+        "edu_4_level": { "id": "Sekolah Dasar", "en": "Primary School" },
+        "edu_4_school": { "id": "SD Negeri Palsatu", "en": "SD Negeri Palsatu" },
+        "edu_4_desc": { "id": "Belajar Dasar dan Mengenal Dunia", "en": "Basic Learning and Exploring the World" },
+        "edu_4_pred_label": { "id": "Predikat", "en": "Predicate" },
+        "edu_4_pred_val": { "id": "Baik", "en": "Good" },
+        "edu_4_hover_desc": { "id": "Dasar-dasar pendidikan formal.", "en": "Basics of formal education." },
+        "edu_4_hover_val_1": { "id": "Membaca", "en": "Reading" },
+        "edu_4_hover_val_2": { "id": "Menulis", "en": "Writing" },
+        "edu_4_hover_val_3": { "id": "Berhitung", "en": "Arithmetic" },
+        "edu_4_float_level": { "id": "Sekolah Dasar", "en": "Primary School" },
+
+        // Edu 5
+        "edu_5_level": { "id": "Taman Kanak-Kanak", "en": "Kindergarten" },
+        "edu_5_school": { "id": "TK Kairos Gereja Kota Kupang", "en": "TK Kairos Gereja Kota Kupang" },
+        "edu_5_desc": { "id": "Awal mula belajar dan bermain.", "en": "The beginning of learning and playing." },
+        "edu_5_imp_label": { "id": "Kesan", "en": "Impression" },
+        "edu_5_imp_val": { "id": "Ceria", "en": "Cheerful" },
+        "edu_5_hover_desc": { "id": "Bermain sambil belajar.", "en": "Playing while learning." },
+        "edu_5_hover_val_1": { "id": "Bermain", "en": "Playing" },
+        "edu_5_hover_val_2": { "id": "Bernyanyi", "en": "Singing" },
+        "edu_5_float_level": { "id": "TK", "en": "Kindergarten" },
+
+        "tech_office": { "id": "Microsoft Office", "en": "Microsoft Office" },
+        "project_live_badge": { "id": "WEBSITE AKTIF", "en": "LIVE WEBSITE" },
+        "contact_title": { "id": "Hubungi Saya", "en": "Get In Touch" },
+        "contact_desc": { "id": "Tertarik berkolaborasi atau punya pertanyaan? Jangan ragu untuk menghubungi saya.", "en": "Interested in collaborating or have any questions? Don't hesitate to contact me." },
+        "contact_email_title": { "id": "Email", "en": "Email" },
+        "contact_email_reply": { "id": "Saya biasanya membalas dalam 24 jam.", "en": "I usually reply within 24 hours." },
+        "contact_location_title": { "id": "Lokasi", "en": "Location" },
+        "contact_connect_title": { "id": "Terhubung dengan saya", "en": "Connect with me" },
+        "footer_rights": { "id": "&copy; 2026 Ronaldo Eka Putra Wabang. All rights reserved.", "en": "&copy; 2026 Ronaldo Eka Putra Wabang. All rights reserved." }
+    };
+
+    const typingWords = {
+        "id": ["Full Stack Developer", "UI/UX Designer", "Pecinta Teknologi", "Pemecah Masalah"],
+        "en": ["Full Stack Developer", "UI/UX Designer", "Tech Enthusiast", "Problem Solver"]
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'id'; // Default to Indonesian
+    let typeEffectWords = typingWords[currentLang];
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.documentElement.lang = lang;
+
+        // Update Typing Words
+        typeEffectWords = typingWords[lang];
+
+        // Update UI Text
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[key] && translations[key][lang]) {
+                if ((el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') && key.includes('placeholder')) {
+                    el.placeholder = translations[key][lang];
+                } else {
+                    el.innerHTML = translations[key][lang];
+                }
+            }
+        });
+
+        // Update Active State of Toggle Buttons
+        const btnId = document.getElementById('lang-id');
+        const btnEn = document.getElementById('lang-en');
+
+        if (lang === 'id') {
+            btnId.classList.add('text-primary', 'font-bold');
+            btnId.classList.remove('text-slate-600', 'dark:text-slate-300');
+            btnEn.classList.remove('text-primary', 'font-bold');
+            btnEn.classList.add('text-slate-600', 'dark:text-slate-300');
+        } else {
+            btnEn.classList.add('text-primary', 'font-bold');
+            btnEn.classList.remove('text-slate-600', 'dark:text-slate-300');
+            btnId.classList.remove('text-primary', 'font-bold');
+            btnId.classList.add('text-slate-600', 'dark:text-slate-300');
+        }
+    }
+
+    // Initialize Language
+    setLanguage(currentLang);
+
+    // Event Listeners for Language Toggle
+    const langBtnId = document.getElementById('lang-id');
+    const langBtnEn = document.getElementById('lang-en');
+
+    if (langBtnId && langBtnEn) {
+        langBtnId.addEventListener('click', () => setLanguage('id'));
+        langBtnEn.addEventListener('click', () => setLanguage('en'));
+    }
+
     const container = document.getElementById('cursor-follower');
 
     if (window.matchMedia("(pointer: fine)").matches) {
@@ -365,14 +573,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typewriter Effect
     const typingElement = document.querySelector('.typing-text');
     if (typingElement) {
-        const words = ["Full Stack Developer", "UI/UX Designer", "Tech Enthusiast", "Problem Solver"];
+        // Words are now dynamic based on typeEffectWords
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
         let typeSpeed = 100;
 
         function type() {
-            const currentWord = words[wordIndex];
+            // Ensure wordIndex is valid if lang changed and array length differed (unlikely here but safe)
+            if (wordIndex >= typeEffectWords.length) wordIndex = 0;
+
+            const currentWord = typeEffectWords[wordIndex];
 
             if (isDeleting) {
                 typingElement.textContent = currentWord.substring(0, charIndex - 1);
@@ -389,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 typeSpeed = 2000; // Pause at end of word
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
+                wordIndex = (wordIndex + 1) % typeEffectWords.length;
                 typeSpeed = 500; // Pause before typing next word
             }
 

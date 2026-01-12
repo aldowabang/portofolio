@@ -94,32 +94,43 @@
                     <div class="hidden md:flex space-x-8">
                         <a href="#home"
                             class="desktop-nav-link group relative py-1 text-sm font-medium text-slate-600 hover:text-primary transition-colors"
-                            data-target="home">
+                            data-target="home" data-i18n="nav_home">
                             Beranda
                             <span
                                 class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                         </a>
                         <a href="#projects"
                             class="desktop-nav-link group relative py-1 text-sm font-medium text-slate-600 hover:text-primary transition-colors"
-                            data-target="projects">
+                            data-target="projects" data-i18n="nav_projects">
                             Proyek
                             <span
                                 class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                         </a>
                         <a href="#experience"
                             class="desktop-nav-link group relative py-1 text-sm font-medium text-slate-600 hover:text-primary transition-colors"
-                            data-target="experience">
+                            data-target="experience" data-i18n="nav_experience">
                             Pengalaman
                             <span
                                 class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                         </a>
                         <a href="#about"
                             class="desktop-nav-link group relative py-1 text-sm font-medium text-slate-600 hover:text-primary transition-colors"
-                            data-target="about">
+                            data-target="about" data-i18n="nav_about">
                             Tentang
                             <span
                                 class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                         </a>
+                    </div>
+
+                    <!-- Language Toggle -->
+                    <div class="flex items-center space-x-2">
+                        <span
+                            class="text-sm font-medium text-slate-600 dark:text-slate-300 cursor-pointer hover:text-primary transition-colors"
+                            id="lang-id">ID</span>
+                        <span class="text-slate-400">|</span>
+                        <span
+                            class="text-sm font-medium text-slate-600 dark:text-slate-300 cursor-pointer hover:text-primary transition-colors"
+                            id="lang-en">EN</span>
                     </div>
 
                     <!-- Dark Mode Toggle Button -->
@@ -173,7 +184,7 @@
 
                 <h1
                     class="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-white leading-tight tracking-tight">
-                    Hi, I'm <br>
+                    <span data-i18n="hero_greeting">Halo, Saya</span> <br>
                     <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-glow">
                         Ronaldo Eka Putra Wabang
@@ -182,18 +193,21 @@
 
                 <!-- Typewriter Animation Container -->
                 <div class="h-10 text-xl md:text-3xl font-mono text-slate-600 dark:text-slate-300 font-medium">
-                    I am a <span class="typing-text text-blue-600 dark:text-blue-400">Full Stack Developer</span>
+                    <span data-i18n="hero_role_prefix">Saya seorang</span> <span
+                        class="typing-text text-blue-600 dark:text-blue-400">Full Stack Developer</span>
                 </div>
 
-                <p class="text-slate-600 dark:text-slate-400 text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
-                    Building seamless digital experiences with modern technologies. Passionate about creating clean,
-                    efficient, and user-centric web solutions.
+                <p class="text-slate-600 dark:text-slate-400 text-lg max-w-lg mx-auto md:mx-0 leading-relaxed"
+                    data-i18n="hero_desc">
+                    Membangun pengalaman digital yang mulus dengan teknologi modern. Bersemangat menciptakan solusi web
+                    yang bersih,
+                    efisien, dan berpusat pada pengguna.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-6 justify-center md:justify-start">
                     <a href="#projects"
                         class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1 font-semibold text-lg flex items-center justify-center gap-2 group">
-                        View Projects
+                        <span data-i18n="hero_btn_projects">Lihat Proyek</span>
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
@@ -202,8 +216,9 @@
                         </svg>
                     </a>
                     <a href="#contact"
-                        class="px-8 py-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm text-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all duration-300 font-semibold text-lg flex items-center justify-center">
-                        Contact Me
+                        class="px-8 py-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm text-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all duration-300 font-semibold text-lg flex items-center justify-center"
+                        data-i18n="hero_btn_contact">
+                        Hubungi Saya
                     </a>
                 </div>
 
@@ -298,7 +313,8 @@
         <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white"
+                        data-i18n="about_title">
                         Tentang Saya</h2>
                     <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
                 </div>
@@ -306,16 +322,18 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <!-- Bio Content -->
                     <div class="order-2 md:order-1 space-y-6 animate-on-scroll">
-                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Perjalanan Menjadi
+                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white" data-i18n="about_journey_title">
+                            Perjalanan Menjadi
                             Developer</h3>
-                        <p class="text-lg text-slate-600 mb-6 leading-relaxed dark:text-slate-300">
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed dark:text-slate-300"
+                            data-i18n="about_desc_1">
                             Saya adalah <span class="font-semibold text-slate-800 dark:text-white">Ronaldo Eka Putra
                                 Wabang</span>,
                             lulusan D3 Teknik Komputer dan Jaringan dari <span
                                 class="font-semibold text-slate-800 dark:text-white">Politeknik Negeri
                                 Kupang</span>.
                         </p>
-                        <p class="text-slate-600 mb-8 leading-relaxed dark:text-slate-300">
+                        <p class="text-slate-600 mb-8 leading-relaxed dark:text-slate-300" data-i18n="about_desc_2">
                             Saya memiliki pengalaman profesional yang mencakup pengembangan web
                             menggunakan teknologi
                             seperti HTML, CSS, JavaScript, PHP, MySQL, dan Laravel, Codeigniter, React,
@@ -325,7 +343,8 @@
                             pemeliharaan jaringan.
                         </p>
                         <div class="pt-4">
-                            <h4 class="text-lg font-semibold text-slate-800 mb-4 dark:text-white">Tech
+                            <h4 class="text-lg font-semibold text-slate-800 mb-4 dark:text-white"
+                                data-i18n="about_tech_stack">Tech
                                 Stack & Tools
                             </h4>
                             <div class="flex flex-wrap gap-3">
@@ -357,8 +376,8 @@
                                 </span>
                                 <!-- Next.js -->
                                 <span
-                                    class="px-4 py-2 rounded-lg bg-slate-800 text-white dark:bg-black dark:border-slate-700 border border-slate-700 font-medium text-sm flex items-center gap-2 hover:bg-slate-700 dark:hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-pointer">
-                                    <i class="devicon-nextjs-original colored text-xl"></i> Next.js
+                                    class="px-4 py-2 rounded-lg bg-white text-black dark:bg-white dark:border-black border border-slate-700 font-medium text-sm flex items-center gap-2 hover:bg-slate-700 dark:hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-pointer">
+                                    <i class="devicon-nextjs-plain text-sm colored text-xl"></i> Next.js
                                 </span>
                                 <!-- CodeIgniter -->
                                 <span
@@ -410,7 +429,8 @@
                         </div>
 
                         <div class="pt-4">
-                            <h4 class="text-lg font-semibold text-slate-800 mb-4 dark:text-white">IT
+                            <h4 class="text-lg font-semibold text-slate-800 mb-4 dark:text-white"
+                                data-i18n="about_it_ops">IT
                                 Operations &
                                 Support</h4>
                             <div class="flex flex-wrap gap-3">
@@ -422,7 +442,7 @@
                                         <path
                                             d="M21.5 2h-19C1.1 2 0 3.1 0 4.5v15C0 20.9 1.1 22 2.5 22h19c1.4 0 2.5-1.1 2.5-2.5v-15C24 3.1 22.9 2 21.5 2zM12 19h-2v-4h2v4zm0-6h-2V9h2v4zm4 6h-2v-4h2v4zm0-6h-2V9h2v4zm4 6h-2v-4h2v4zm0-6h-2V9h2v4z" />
                                     </svg>
-                                    Microsoft Office
+                                    <span data-i18n="tech_office">Microsoft Office</span>
                                 </span>
 
                                 <!-- OS Installation (Windows & Linux) -->
@@ -431,7 +451,7 @@
                                     <i class="devicon-windows8-original colored text-lg"></i>
                                     <span class="text-slate-400">/</span>
                                     <i class="devicon-linux-plain colored text-lg"></i>
-                                    OS Installation
+                                    <span data-i18n="tech_os">OS Installation</span>
                                 </span>
 
                                 <!-- Network Troubleshooting -->
@@ -442,7 +462,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                                     </svg>
-                                    Network Install & T-Shoot
+                                    <span data-i18n="tech_network">Network Install & T-Shoot</span>
                                 </span>
 
                                 <!-- Hardware Service -->
@@ -453,7 +473,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                                     </svg>
-                                    Servis Laptop/HP
+                                    <span data-i18n="tech_service">Servis Laptop/HP</span>
                                 </span>
                             </div>
                         </div>
@@ -496,7 +516,7 @@
                                             </svg>
                                         </div>
 
-                                        <h3 class="text-2xl font-bold">Biodata</h3>
+                                        <h3 class="text-2xl font-bold" data-i18n="flip_bio_title">Biodata</h3>
                                         <div class="w-12 h-1 bg-white/50 mx-auto rounded-full"></div>
 
                                         <div class="space-y-3 text-left w-full pl-8 mt-4 font-medium">
@@ -507,7 +527,8 @@
                                                         stroke-width="2"
                                                         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                                 </svg>
-                                                <span>Umur: <span class="text-white/80 font-normal">25
+                                                <span data-i18n="flip_age_label">Umur: <span
+                                                        class="text-white/80 font-normal" data-i18n="flip_age_val">25
                                                         Tahun</span></span>
                                             </p>
                                             <p class="flex items-center gap-3">
@@ -519,7 +540,9 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                                 </svg>
-                                                <span>Domisili: <span class="text-white/80 font-normal">Jawa Barat,
+                                                <span data-i18n="flip_loc_label">Domisili: <span
+                                                        class="text-white/80 font-normal" data-i18n="flip_loc_val">Jawa
+                                                        Barat,
                                                         Indonesia</span></span>
                                             </p>
                                             <p class="flex items-center gap-3">
@@ -539,7 +562,7 @@
                                                         stroke-width="2"
                                                         d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                 </svg>
-                                                <span>Status: <span
+                                                <span data-i18n="flip_status_label">Status: <span
                                                         class="text-green-300 font-bold bg-green-500/20 px-2 py-0.5 rounded-full text-xs">Open
                                                         to Work</span></span>
                                             </p>
@@ -561,9 +584,9 @@
         <div id="canvas-projects" class="absolute inset-0 z-0 pointer-events-none opacity-30"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16 fade-in-section">
-                <h2
-                    class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 mb-4 inline-block">
-                    My Projects
+                <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 mb-4 inline-block"
+                    data-i18n="projects_title">
+                    Proyek Saya
                 </h2>
                 <div class="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full">
                 </div>
@@ -584,21 +607,22 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3
-                            class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400"
+                            data-i18n="project_1_title">
                             Sistem E-Learning SMK N 5 Kupang</h3>
-                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300">
+                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300"
+                            data-i18n="project_1_desc">
                             Platform E-Learning untuk mendukung proses pembelajaran digital,
                             mencakup manajemen materi,
                             pengumpulan tugas, dan fitur interaksi antara guru dan siswa.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-orange-50 text-orange-600 rounded-full text-xs font-medium">CodeIgniter</span>
-                            <span
-                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">Bootstrap</span>
-                            <span
-                                class="px-3 py-1 bg-slate-50 text-slate-600 rounded-full text-xs font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-orange-50 text-orange-600 rounded-full text-xs font-medium">
+                                <i class="devicon-codeigniter-plain text-sm"></i> CodeIgniter</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">
+                                <i class="devicon-bootstrap-plain text-sm"></i> Bootstrap</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 rounded-full text-xs font-medium">
+                                <i class="devicon-mysql-plain text-sm"></i> MySQL</span>
                         </div>
                     </div>
                 </div>
@@ -606,6 +630,13 @@
                 <!-- Project 2 -->
                 <div
                     class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group border border-slate-100 dark:bg-slate-800 dark:border-slate-700">
+                    <div class="absolute top-4 right-4 z-20">
+                        <span
+                            class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1 animate-pulse">
+                            <span class="w-2 h-2 bg-white rounded-full"></span> <span
+                                data-i18n="project_live_badge">LIVE PRODUCTION</span>
+                        </span>
+                    </div>
                     <div class="aspect-video relative overflow-hidden">
                         <img src="assets/img/default.png" alt="GMIT Center"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
@@ -624,19 +655,20 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3
-                            class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400"
+                            data-i18n="project_2_title">
                             Sistem Monitoring GMIT Center</h3>
-                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300">
+                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300"
+                            data-i18n="project_2_desc">
                             Sistem berbasis web untuk memonitor dan melaporkan pengelolaan
                             Amplop Janji Iman secara
                             real-time. Fitur mencakup pelacakan kontribusi dan rekap otomatis.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-medium">Laravel</span>
-                            <span
-                                class="px-3 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-medium">Tailwind</span>
+                            <span class="px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-medium">
+                                <i class="devicon-laravel-plain text-sm"></i> Laravel</span>
+                            <span class="px-3 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-medium">
+                                <i class="devicon-tailwindcss-plain text-sm"></i> Tailwind</span>
                         </div>
                     </div>
                 </div>
@@ -658,21 +690,22 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3
-                            class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400"
+                            data-i18n="project_3_title">
                             Dashboard KEPPK</h3>
-                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300">
+                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300"
+                            data-i18n="project_3_desc">
                             Platform terintegrasi untuk pengajuan, review, dan persetujuan
                             dokumen penelitian oleh
                             Komite Etik. Menggunakan arsitektur modern untuk performa tinggi.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-white rounded-full text-xs font-medium">Next.js
-                                15</span>
-                            <span
-                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">PostgreSQL</span>
-                            <span
-                                class="px-3 py-1 bg-teal-50 text-teal-600 rounded-full text-xs font-medium">Prisma</span>
+                            <span class="px-3 py-1 bg-slate-800 text-white rounded-full text-xs font-medium">
+                                <i class="devicon-nextjs-plain text-sm"></i> Next.js 15</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">
+                                <i class="devicon-postgresql-plain text-sm"></i> PostgreSQL</span>
+                            <span class="px-3 py-1 bg-teal-50 text-teal-600 rounded-full text-xs font-medium">
+                                <i class="devicon-prisma-plain text-sm"></i> Prisma</span>
                         </div>
                     </div>
                 </div>
@@ -695,11 +728,12 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3
-                            class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400"
+                            data-i18n="project_4_title">
                             Sistem Informasi Pasien Puskesmas (E-ilogo)
                         </h3>
-                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300">
+                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300"
+                            data-i18n="project_4_desc">
                             Aplikasi manajemen data pasien digital yang dirancang untuk mempercepat proses administrasi
                             di Puskesmas. Meminimalisir kesalahan input dan mempercepat pencarian riwayat medis.
                         </p>
@@ -708,10 +742,10 @@
                                 class="px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-medium flex items-center gap-1">
                                 <i class="devicon-laravel-plain text-sm"></i> Laravel
                             </span>
-                            <span
-                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">MySQL</span>
-                            <span
-                                class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium">Bootstrap</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">
+                                <i class="devicon-mysql-plain text-sm"></i> MySQL</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium">
+                                <i class="devicon-bootstrap-plain text-sm"></i> Bootstrap</span>
                         </div>
                     </div>
                 </div>
@@ -723,7 +757,8 @@
                     <div class="absolute top-4 right-4 z-20">
                         <span
                             class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1 animate-pulse">
-                            <span class="w-2 h-2 bg-white rounded-full"></span> LIVE PRODUCTION
+                            <span class="w-2 h-2 bg-white rounded-full"></span> <span
+                                data-i18n="project_live_badge">LIVE PRODUCTION</span>
                         </span>
                     </div>
 
@@ -733,7 +768,7 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                             <div class="flex gap-4">
-                                <a href="#"
+                                <a href="https://simantapkabkupang.my.id/" target="_blank"
                                     class="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white hover:text-blue-600 transition-colors"
                                     title="Live Demo">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
@@ -746,11 +781,12 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3
-                            class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400"
+                            data-i18n="project_5_title">
                             SIMANTAP (Sistem Informasi Kelurahan)
                         </h3>
-                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300">
+                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300"
+                            data-i18n="project_5_desc">
                             Platform pelayanan publik tingkat kelurahan yang interaktif dan real-time. Menggunakan stack
                             TALL untuk pengalaman pengguna yang responsif (SPA).
                         </p>
@@ -760,13 +796,21 @@
                                 <i class="devicon-laravel-plain text-sm"></i> Laravel
                             </span>
                             <span
-                                class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-xs font-medium">Livewire</span>
+                                class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="devicon-livewire-plain text-sm"></i>
+                                Livewire</span>
                             <span
-                                class="px-3 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-medium">Tailwind</span>
+                                class="px-3 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="devicon-tailwindcss-plain text-sm"></i>
+                                Tailwind</span>
                             <span
-                                class="px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs font-medium">Alpine.js</span>
+                                class="px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="devicon-alpinejs-plain text-sm"></i>
+                                Alpine.js</span>
                             <span
-                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">MySQL</span>
+                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="devicon-mysql-plain text-sm"></i>
+                                MySQL</span>
                         </div>
                     </div>
                 </div>
@@ -789,23 +833,26 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3
-                            class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400"
+                            data-i18n="project_6_title">
                             SAIFUL (Pencarian Lapangan Futsal)
                         </h3>
-                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300">
+                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300"
+                            data-i18n="project_6_desc">
                             Solusi digital untuk mempermudah pecinta olahraga dalam menemukan dan memesan lapangan
                             futsal. Sistem booking dan galeri fasilitas.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span
                                 class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-medium flex items-center gap-1">
-                                <i class="devicon-php-plain text-sm"></i> PHP Native
+                                <i class="devicon-php-plain text-sm"></i>PHP Native
                             </span>
                             <span
-                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">MySQL</span>
+                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="devicon-mysql-plain text-sm"></i> MySQL</span>
                             <span
-                                class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium">Bootstrap</span>
+                                class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="devicon-bootstrap-plain text-sm"></i> Bootstrap</span>
                         </div>
                     </div>
                 </div>
@@ -828,11 +875,12 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3
-                            class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400"
+                            data-i18n="project_7_title">
                             SI Bebas Perpus
                         </h3>
-                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300">
+                        <p class="text-slate-600 mb-4 text-sm line-clamp-3 dark:text-slate-300"
+                            data-i18n="project_7_desc">
                             Aplikasi validasi status peminjaman buku mahasiswa sebagai syarat kelulusan. Otomatisasi
                             pengecekan tunggakan dan cetak surat bebas pustaka.
                         </p>
@@ -842,9 +890,11 @@
                                 <i class="devicon-laravel-plain text-sm"></i> Laravel
                             </span>
                             <span
-                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">MySQL</span>
+                                class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="devicon-mysql-plain text-sm"></i> MySQL</span>
                             <span
-                                class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium">Bootstrap</span>
+                                class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium flex items-center gap-1">
+                                <i class="devicon-bootstrap-plain text-sm"></i> Bootstrap</span>
                         </div>
                     </div>
                 </div>
@@ -870,8 +920,8 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-20 fade-in-section">
-                <h2
-                    class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4 inline-block">
+                <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4 inline-block"
+                    data-i18n="exp_title">
                     Pengalaman Kerja
                 </h2>
                 <div class="h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
@@ -898,15 +948,19 @@
                         <div
                             class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 transform md:group-hover:translate-x-2 dark:bg-slate-800/80 dark:border-slate-700 dark:hover:border-blue-500/50">
                             <span
-                                class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-bold mb-4">Mar
+                                class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-bold mb-4"
+                                data-i18n="exp_1_date">Mar
                                 2020 - Sekarang</span>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white">Full Stack Web Developer
+                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white" data-i18n="exp_1_role">
+                                Full Stack Web Developer
                             </h3>
-                            <p class="text-blue-600 font-medium mb-4 dark:text-blue-400">Freelance</p>
+                            <p class="text-blue-600 font-medium mb-4 dark:text-blue-400" data-i18n="exp_1_type">
+                                Freelance</p>
                             <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside dark:text-slate-300">
-                                <li>Mengembangkan website full stack (React, Laravel, Next.js).</li>
-                                <li>Maintenance, debugging, dan optimisasi performa.</li>
-                                <li>Komunikasi klien & manajemen proyek.</li>
+                                <li data-i18n="exp_1_desc_1">Mengembangkan website full stack (React, Laravel, Next.js).
+                                </li>
+                                <li data-i18n="exp_1_desc_2">Maintenance, debugging, dan optimisasi performa.</li>
+                                <li data-i18n="exp_1_desc_3">Komunikasi klien & manajemen proyek.</li>
                             </ul>
                         </div>
                     </div>
@@ -919,16 +973,18 @@
                         <div
                             class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-orange-200 transition-all duration-300 transform md:group-hover:-translate-x-2 md:text-right dark:bg-slate-800/80 dark:border-slate-700 dark:hover:border-orange-500/50">
                             <span
-                                class="inline-block px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-bold mb-4">Juni
+                                class="inline-block px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-bold mb-4"
+                                data-i18n="exp_2_date">Juni
                                 2025 - Nov 2025</span>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white">BNI Sales Generalis</h3>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white" data-i18n="exp_2_role">
+                                BNI Sales Generalis</h3>
                             <p class="text-orange-600 font-medium mb-4 dark:text-orange-400">PT. Bank Negara Indonesia
                             </p>
                             <ul
                                 class="text-slate-600 text-sm space-y-2 list-disc list-inside md:list-none dark:text-slate-300">
-                                <li>Akuisisi nasabah baru & penjualan produk perbankan.</li>
-                                <li>Verifikasi dokumen & pendampingan nasabah.</li>
-                                <li>Pencapaian target penjualan bulanan.</li>
+                                <li data-i18n="exp_2_desc_1">Akuisisi nasabah baru & penjualan produk perbankan.</li>
+                                <li data-i18n="exp_2_desc_2">Verifikasi dokumen & pendampingan nasabah.</li>
+                                <li data-i18n="exp_2_desc_3">Pencapaian target penjualan bulanan.</li>
                             </ul>
                         </div>
                     </div>
@@ -957,14 +1013,16 @@
                         <div
                             class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-teal-200 transition-all duration-300 transform md:group-hover:translate-x-2 dark:bg-slate-800/80 dark:border-slate-700 dark:hover:border-teal-500/50">
                             <span
-                                class="inline-block px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-xs font-bold mb-4">Okt
+                                class="inline-block px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-xs font-bold mb-4"
+                                data-i18n="exp_3_date">Okt
                                 2024 - Apr 2025</span>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white">IT Event Tes CPNS</h3>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white" data-i18n="exp_3_role">IT
+                                Event Tes CPNS</h3>
                             <p class="text-teal-600 font-medium mb-4 dark:text-teal-400">PT. Aurora Consulting</p>
                             <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside dark:text-slate-300">
-                                <li>Troubleshooting PC, jaringan & sistem ujian.</li>
-                                <li>Instalasi server, router, switch.</li>
-                                <li>Monitoring keamanan sistem & jaringan.</li>
+                                <li data-i18n="exp_3_desc_1">Troubleshooting PC, jaringan & sistem ujian.</li>
+                                <li data-i18n="exp_3_desc_2">Instalasi server, router, switch.</li>
+                                <li data-i18n="exp_3_desc_3">Monitoring keamanan sistem & jaringan.</li>
                             </ul>
                         </div>
                     </div>
@@ -977,15 +1035,17 @@
                         <div
                             class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-purple-200 transition-all duration-300 transform md:group-hover:-translate-x-2 md:text-right dark:bg-slate-800/80 dark:border-slate-700 dark:hover:border-purple-500/50">
                             <span
-                                class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs font-bold mb-4">Mei
+                                class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs font-bold mb-4"
+                                data-i18n="exp_4_date">Mei
                                 2024 - Agu 2024</span>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white">Outlet Supervisor</h3>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white" data-i18n="exp_4_role">
+                                Outlet Supervisor</h3>
                             <p class="text-purple-600 font-medium mb-4 dark:text-purple-400">CV. Joel Store Laptop</p>
                             <ul
                                 class="text-slate-600 text-sm space-y-2 list-disc list-inside md:list-none dark:text-slate-300">
-                                <li>Manajemen staf, stok & operasional outlet.</li>
-                                <li>Memastikan standar pelayanan toko.</li>
-                                <li>Pelaporan penjualan & inventaris.</li>
+                                <li data-i18n="exp_4_desc_1">Manajemen staf, stok & operasional outlet.</li>
+                                <li data-i18n="exp_4_desc_2">Memastikan standar pelayanan toko.</li>
+                                <li data-i18n="exp_4_desc_3">Pelaporan penjualan & inventaris.</li>
                             </ul>
                         </div>
                     </div>
@@ -1013,14 +1073,16 @@
                         <div
                             class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-red-200 transition-all duration-300 transform md:group-hover:translate-x-2 dark:bg-slate-800/80 dark:border-slate-700 dark:hover:border-red-500/50">
                             <span
-                                class="inline-block px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold mb-4">Agu
+                                class="inline-block px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold mb-4"
+                                data-i18n="exp_5_date">Agu
                                 2016 - Nov 2016</span>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white">Intern / Magang</h3>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-1 dark:text-white" data-i18n="exp_5_role">
+                                Intern / Magang</h3>
                             <p class="text-red-600 font-medium mb-4 dark:text-red-400">TVRI Nusa Tenggara Timur</p>
                             <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside dark:text-slate-300">
-                                <li>Operasional peralatan broadcast/switcher.</li>
-                                <li>Koordinasi produksi siaran live.</li>
-                                <li>Support teknis lapangan (shooting dsb).</li>
+                                <li data-i18n="exp_5_desc_1">Operasional peralatan broadcast/switcher.</li>
+                                <li data-i18n="exp_5_desc_2">Koordinasi produksi siaran live.</li>
+                                <li data-i18n="exp_5_desc_3">Support teknis lapangan (shooting dsb).</li>
                             </ul>
                         </div>
                     </div>
@@ -1049,10 +1111,12 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16 fade-in-section">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white">Riwayat Pendidikan
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white"
+                        data-i18n="edu_title">Riwayat Pendidikan
                     </h2>
                     <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
-                    <p class="mt-4 text-slate-600 dark:text-slate-300">Perjalanan akademik saya dari awal hingga menjadi
+                    <p class="mt-4 text-slate-600 dark:text-slate-300" data-i18n="edu_desc">Perjalanan akademik saya
+                        dari awal hingga menjadi
                         Engineer.</p>
                 </div>
 
@@ -1073,15 +1137,19 @@
                                     class="absolute -left-[11px] top-0 w-5 h-5 bg-slate-200 rounded-full md:hidden border-4 border-white">
                                 </div>
 
-                                <h3 class="text-xl font-bold text-slate-800 dark:text-white">Perguruan Tinggi</h3>
+                                <h3 class="text-xl font-bold text-slate-800 dark:text-white" data-i18n="edu_1_level">
+                                    Perguruan Tinggi</h3>
                                 <div
                                     class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold inline-block mb-2 mt-1">
                                     2017 - 2023</div>
-                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300">Politeknik Negeri
+                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300"
+                                    data-i18n="edu_1_school">Politeknik Negeri
                                     Kupang</h4>
-                                <p class="text-slate-500 italic mb-2 dark:text-slate-400">Prodi Teknik Komputer dan
+                                <p class="text-slate-500 italic mb-2 dark:text-slate-400" data-i18n="edu_1_major">Prodi
+                                    Teknik Komputer dan
                                     Jaringan</p>
-                                <p class="text-slate-600 text-sm dark:text-slate-300">Fokus pada jaringan komputer,
+                                <p class="text-slate-600 text-sm dark:text-slate-300" data-i18n="edu_1_desc">Fokus pada
+                                    jaringan komputer,
                                     sistem operasi, dan
                                     pengembangan web dasar.</p>
                             </div>
@@ -1116,11 +1184,12 @@
                                         <!-- Score / Grade -->
                                         <div class="mb-4">
                                             <span class="text-3xl font-bold text-yellow-400">3.17</span>
-                                            <p class="text-xs text-slate-300 uppercase tracking-widest">IPK Akhir</p>
+                                            <p class="text-xs text-slate-300 uppercase tracking-widest"
+                                                data-i18n="edu_1_ipk_label">IPK Akhir</p>
                                         </div>
 
                                         <!-- Details -->
-                                        <p class="text-white text-sm mb-4 leading-relaxed">
+                                        <p class="text-white text-sm mb-4 leading-relaxed" data-i18n="edu_1_hover_desc">
                                             Fokus pada Teknik Komputer & Jaringan.
                                         </p>
 
@@ -1137,10 +1206,11 @@
                                     <!-- Floating Label (Hidden on hover to make room for details?) -> Let's keep it but maybe move it away or simpler: hide it -->
                                     <div
                                         class="absolute -bottom-6 -right-6 bg-blue-600 p-6 rounded-2xl shadow-xl max-w-[250px] hidden md:block transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                                        <p class="text-white font-bold leading-tight">
+                                        <p class="text-white font-bold leading-tight" data-i18n="edu_1_school">
                                             Politeknik Negeri Kupang
                                         </p>
-                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold">
+                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold"
+                                            data-i18n="edu_1_float_level">
                                             D3 Teknik Elektro
                                         </p>
                                     </div>
@@ -1166,9 +1236,10 @@
                                         class="absolute inset-0 bg-slate-900/90 flex flex-col items-center justify-center p-6 text-center transition-all duration-500 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
                                         <div class="mb-4">
                                             <span class="text-3xl font-bold text-yellow-400">85.5</span>
-                                            <p class="text-xs text-slate-300 uppercase tracking-widest">Nilai Ujian</p>
+                                            <p class="text-xs text-slate-300 uppercase tracking-widest"
+                                                data-i18n="edu_2_score_label">Nilai Ujian</p>
                                         </div>
-                                        <p class="text-white text-sm mb-4 leading-relaxed">
+                                        <p class="text-white text-sm mb-4 leading-relaxed" data-i18n="edu_2_hover_desc">
                                             Jurusan Multimedia, Desain Grafis & Video Editing.
                                         </p>
                                         <div class="flex flex-wrap justify-center gap-2">
@@ -1183,8 +1254,10 @@
 
                                     <div
                                         class="absolute -bottom-6 -right-6 bg-blue-600 p-6 rounded-2xl shadow-xl max-w-[250px] hidden md:block transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                                        <p class="text-white font-bold leading-tight">SMK Negeri 5 Kupang</p>
-                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold">
+                                        <p class="text-white font-bold leading-tight" data-i18n="edu_2_school">SMK
+                                            Negeri 5 Kupang</p>
+                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold"
+                                            data-i18n="edu_2_float_level">
                                             SMK (Multimedia)</p>
                                     </div>
                                 </div>
@@ -1200,13 +1273,16 @@
                                 <div
                                     class="absolute -left-[11px] top-0 w-5 h-5 bg-slate-200 rounded-full md:hidden border-4 border-white">
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 dark:text-white">SMK (Multimedia)</h3>
+                                <h3 class="text-xl font-bold text-slate-800 dark:text-white" data-i18n="edu_2_level">SMK
+                                    (Multimedia)</h3>
                                 <div
                                     class="bg-slate-200 text-slate-600 px-3 py-1 rounded-full text-xs font-bold inline-block mb-2 mt-1 dark:bg-slate-700 dark:text-slate-300">
                                     2014 - 2017</div>
-                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300">SMK Negeri 5 Kupang
+                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300"
+                                    data-i18n="edu_2_school">SMK Negeri 5 Kupang
                                 </h4>
-                                <p class="text-slate-600 text-sm dark:text-slate-300">Jurusan Multimedia. Mendalami
+                                <p class="text-slate-600 text-sm dark:text-slate-300" data-i18n="edu_2_desc">Jurusan
+                                    Multimedia. Mendalami
                                     desain grafis, editing
                                     video, dan animasi dasar.</p>
                             </div>
@@ -1219,12 +1295,15 @@
                                 <div
                                     class="absolute -left-[11px] top-0 w-5 h-5 bg-slate-200 rounded-full md:hidden border-4 border-white">
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 dark:text-white">SMP</h3>
+                                <h3 class="text-xl font-bold text-slate-800 dark:text-white" data-i18n="edu_3_level">SMP
+                                </h3>
                                 <div
                                     class="bg-slate-200 text-slate-600 px-3 py-1 rounded-full text-xs font-bold inline-block mb-2 mt-1 dark:bg-slate-700 dark:text-slate-300">
                                     2011 - 2014</div>
-                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300">SMP N 6 Kupang</h4>
-                                <p class="text-slate-600 text-sm dark:text-slate-300">Aktif dalam kegiatan
+                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300"
+                                    data-i18n="edu_3_school">SMP N 6 Kupang</h4>
+                                <p class="text-slate-600 text-sm dark:text-slate-300" data-i18n="edu_3_desc">Aktif dalam
+                                    kegiatan
                                     ekstrakurikuler dan organisasi
                                     sekolah.</p>
                             </div>
@@ -1248,10 +1327,13 @@
                                     <div
                                         class="absolute inset-0 bg-slate-900/90 flex flex-col items-center justify-center p-6 text-center transition-all duration-500 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
                                         <div class="mb-4">
-                                            <span class="text-3xl font-bold text-yellow-400">Lulus</span>
-                                            <p class="text-xs text-slate-300 uppercase tracking-widest">Status</p>
+                                            <span class="text-3xl font-bold text-yellow-400"
+                                                data-i18n="edu_3_status_val">Lulus</span>
+                                            <p class="text-xs text-slate-300 uppercase tracking-widest"
+                                                data-i18n="edu_3_status_label">Status</p>
                                         </div>
-                                        <p class="text-white text-sm mb-4 leading-relaxed">Aktif dalam Pramuka dan OSIS.
+                                        <p class="text-white text-sm mb-4 leading-relaxed" data-i18n="edu_3_hover_desc">
+                                            Aktif dalam Pramuka dan OSIS.
                                         </p>
                                         <div class="flex flex-wrap justify-center gap-2">
                                             <span
@@ -1263,8 +1345,10 @@
 
                                     <div
                                         class="absolute -bottom-6 -right-6 bg-blue-600 p-6 rounded-2xl shadow-xl max-w-[250px] hidden md:block transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                                        <p class="text-white font-bold leading-tight">SMP N 6 Kupang</p>
-                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold">
+                                        <p class="text-white font-bold leading-tight" data-i18n="edu_3_school">SMP N 6
+                                            Kupang</p>
+                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold"
+                                            data-i18n="edu_3_float_level">
                                             SMP</p>
                                     </div>
                                 </div>
@@ -1287,25 +1371,30 @@
                                     <div
                                         class="absolute inset-0 bg-slate-900/90 flex flex-col items-center justify-center p-6 text-center transition-all duration-500 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
                                         <div class="mb-4">
-                                            <span class="text-3xl font-bold text-yellow-400">Baik</span>
-                                            <p class="text-xs text-slate-300 uppercase tracking-widest">Predikat</p>
+                                            <span class="text-3xl font-bold text-yellow-400"
+                                                data-i18n="edu_4_pred_val">Baik</span>
+                                            <p class="text-xs text-slate-300 uppercase tracking-widest"
+                                                data-i18n="edu_4_pred_label">Predikat</p>
                                         </div>
-                                        <p class="text-white text-sm mb-4 leading-relaxed">Dasar-dasar pendidikan
+                                        <p class="text-white text-sm mb-4 leading-relaxed" data-i18n="edu_4_hover_desc">
+                                            Dasar-dasar pendidikan
                                             formal.</p>
                                         <div class="flex flex-wrap justify-center gap-2">
-                                            <span
-                                                class="px-2 py-1 bg-white/10 rounded text-xs text-white">Membaca</span>
-                                            <span
-                                                class="px-2 py-1 bg-white/10 rounded text-xs text-white">Menulis</span>
-                                            <span
-                                                class="px-2 py-1 bg-white/10 rounded text-xs text-white">Berhitung</span>
+                                            <span class="px-2 py-1 bg-white/10 rounded text-xs text-white"
+                                                data-i18n="edu_4_hover_val_1">Membaca</span>
+                                            <span class="px-2 py-1 bg-white/10 rounded text-xs text-white"
+                                                data-i18n="edu_4_hover_val_2">Menulis</span>
+                                            <span class="px-2 py-1 bg-white/10 rounded text-xs text-white"
+                                                data-i18n="edu_4_hover_val_3">Berhitung</span>
                                         </div>
                                     </div>
 
                                     <div
                                         class="absolute -bottom-6 -right-6 bg-blue-600 p-6 rounded-2xl shadow-xl max-w-[250px] hidden md:block transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                                        <p class="text-white font-bold leading-tight">SD Negeri Palsatu</p>
-                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold">
+                                        <p class="text-white font-bold leading-tight" data-i18n="edu_4_school">SD Negeri
+                                            Palsatu</p>
+                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold"
+                                            data-i18n="edu_4_float_level">
                                             Sekolah Dasar</p>
                                     </div>
                                 </div>
@@ -1321,14 +1410,16 @@
                                 <div
                                     class="absolute -left-[11px] top-0 w-5 h-5 bg-slate-200 rounded-full md:hidden border-4 border-white">
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 dark:text-white">Sekolah Dasar</h3>
+                                <h3 class="text-xl font-bold text-slate-800 dark:text-white" data-i18n="edu_4_level">
+                                    Sekolah Dasar</h3>
                                 <div
                                     class="bg-slate-200 text-slate-600 px-3 py-1 rounded-full text-xs font-bold inline-block mb-2 mt-1 dark:bg-slate-700 dark:text-slate-300">
                                     2005 - 2011</div>
-                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300">SD Negeri Palsatu
+                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300"
+                                    data-i18n="edu_4_school">SD Negeri Palsatu
                                 </h4>
-                                <p
-                                    class="text-slate-600 text-xs mt-2 uppercase tracking-widest font-semibold dark:text-slate-400">
+                                <p class="text-slate-600 text-xs mt-2 uppercase tracking-widest font-semibold dark:text-slate-400"
+                                    data-i18n="edu_4_desc">
                                     Belajar Dasar dan Mengenal Dunia</p>
                             </div>
                         </div>
@@ -1340,13 +1431,16 @@
                                 <div
                                     class="absolute -left-[11px] top-0 w-5 h-5 bg-slate-200 rounded-full md:hidden border-4 border-white">
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 dark:text-white">Taman Kanak-Kanak</h3>
+                                <h3 class="text-xl font-bold text-slate-800 dark:text-white" data-i18n="edu_5_level">
+                                    Taman Kanak-Kanak</h3>
                                 <div
                                     class="bg-slate-200 text-slate-600 px-3 py-1 rounded-full text-xs font-bold inline-block mb-2 mt-1 dark:bg-slate-700 dark:text-slate-300">
                                     2004 - 2005</div>
-                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300">TK Kairos Gereja
+                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300"
+                                    data-i18n="edu_5_school">TK Kairos Gereja
                                     Kota Kupang</h4>
-                                <p class="text-slate-600 text-sm dark:text-slate-300">Awal mula belajar dan bermain.</p>
+                                <p class="text-slate-600 text-sm dark:text-slate-300" data-i18n="edu_5_desc">Awal mula
+                                    belajar dan bermain.</p>
                             </div>
 
                             <div
@@ -1365,30 +1459,31 @@
                                         </div>
                                     </div>
 
-                                    <!-- Hover Detail Overlay -->
                                     <div
                                         class="absolute inset-0 bg-slate-900/90 flex flex-col items-center justify-center p-6 text-center transition-all duration-500 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
                                         <div class="mb-4">
-                                            <span class="text-3xl font-bold text-yellow-400">Ceria</span>
-                                            <p class="text-xs text-slate-300 uppercase tracking-widest">Kesan</p>
+                                            <span class="text-3xl font-bold text-yellow-400"
+                                                data-i18n="edu_5_imp_val">Ceria</span>
+                                            <p class="text-xs text-slate-300 uppercase tracking-widest"
+                                                data-i18n="edu_5_imp_label">Kesan</p>
                                         </div>
-                                        <p class="text-white text-sm mb-4 leading-relaxed">
+                                        <p class="text-white text-sm mb-4 leading-relaxed" data-i18n="edu_5_hover_desc">
                                             Bermain sambil belajar.
                                         </p>
                                         <div class="flex flex-wrap justify-center gap-2">
-                                            <span
-                                                class="px-2 py-1 bg-white/10 rounded text-xs text-white">Bermain</span>
-                                            <span
-                                                class="px-2 py-1 bg-white/10 rounded text-xs text-white">Bernyanyi</span>
+                                            <span class="px-2 py-1 bg-white/10 rounded text-xs text-white"
+                                                data-i18n="edu_5_hover_val_1">Bermain</span>
+                                            <span class="px-2 py-1 bg-white/10 rounded text-xs text-white"
+                                                data-i18n="edu_5_hover_val_2">Bernyanyi</span>
                                         </div>
                                     </div>
-
                                     <div
                                         class="absolute -bottom-6 -right-6 bg-blue-600 p-6 rounded-2xl shadow-xl max-w-[250px] hidden md:block  transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                                        <p class="text-white font-bold leading-tight">
+                                        <p class="text-white font-bold leading-tight" data-i18n="edu_5_school">
                                             Taman Kanak-kanak Kairos Gereja Kota Kupang.
                                         </p>
-                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold">
+                                        <p class="text-blue-200 text-xs mt-2 uppercase tracking-widest font-semibold"
+                                            data-i18n="edu_5_float_level">
                                             TK</p>
                                     </div>
                                 </div>
@@ -1406,12 +1501,12 @@
         <div id="canvas-contact" class="absolute inset-0 z-0 pointer-events-none opacity-30"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16 fade-in-section">
-                <h2
-                    class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 mb-4 inline-block">
+                <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 mb-4 inline-block"
+                    data-i18n="contact_title">
                     Get In Touch
                 </h2>
                 <div class="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full"></div>
-                <p class="mt-4 text-slate-600 max-w-2xl mx-auto dark:text-slate-300">
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto dark:text-slate-300" data-i18n="contact_desc">
                     Tertarik berkolaborasi atau punya pertanyaan? Jangan ragu untuk menghubungi saya.
                 </p>
             </div>
@@ -1430,9 +1525,11 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1 dark:text-white">Email</h3>
+                                <h3 class="text-xl font-bold text-slate-800 mb-1 dark:text-white"
+                                    data-i18n="contact_email_title">Email</h3>
                                 <p class="text-slate-600 dark:text-slate-300">aldowabang@gmail.com</p>
-                                <p class="text-slate-400 text-sm mt-1">Saya biasanya membalas dalam 24 jam.</p>
+                                <p class="text-slate-400 text-sm mt-1" data-i18n="contact_email_reply">Saya biasanya
+                                    membalas dalam 24 jam.</p>
                             </div>
                         </div>
                     </div>
@@ -1450,7 +1547,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1 dark:text-white">Lokasi</h3>
+                                <h3 class="text-xl font-bold text-slate-800 mb-1 dark:text-white"
+                                    data-i18n="contact_location_title">Lokasi</h3>
                                 <p class="text-slate-600 dark:text-slate-300">Kab. Purwakarta / Kupang</p>
                                 <p class="text-slate-600 dark:text-slate-300">Indonesia</p>
                             </div>
@@ -1459,7 +1557,8 @@
 
                     <div
                         class="bg-slate-50 p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300 dark:bg-slate-800 dark:border-slate-700">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4 dark:text-white">Connect with me</h3>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4 dark:text-white"
+                            data-i18n="contact_connect_title">Connect with me</h3>
                         <div class="flex gap-4">
                             <a href="#"
                                 class="p-4 bg-white rounded-xl shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300 text-slate-700 hover:text-blue-600 border border-slate-200 dark:bg-slate-900 dark:border-slate-600 dark:text-slate-300 dark:hover:text-blue-400">
@@ -1482,37 +1581,38 @@
                     <form action="#" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label for="name"
-                                class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300">Nama
+                            <label for="name" class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300"
+                                data-i18n="form_name">Nama
                                 Lengkap</label>
                             <input type="text" id="name"
                                 class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 transition-all outline-none dark:bg-slate-900 dark:border-slate-600 dark:text-white dark:focus:ring-blue-500/30"
-                                placeholder="Masukkan nama Anda">
+                                placeholder="Masukkan nama Anda" data-i18n="form_name_placeholder">
                         </div>
                         <div>
-                            <label for="email"
-                                class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300">Email</label>
+                            <label for="email" class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300"
+                                data-i18n="form_email">Email</label>
                             <input type="email" id="email"
                                 class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 transition-all outline-none dark:bg-slate-900 dark:border-slate-600 dark:text-white dark:focus:ring-blue-500/30"
                                 placeholder="nama@email.com">
                         </div>
                     </div>
                     <div>
-                        <label for="subject"
-                            class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300">Subjek</label>
+                        <label for="subject" class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300"
+                            data-i18n="form_subject">Subjek</label>
                         <input type="text" id="subject"
                             class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 transition-all outline-none dark:bg-slate-900 dark:border-slate-600 dark:text-white dark:focus:ring-blue-500/30"
-                            placeholder="Judul pesan">
+                            placeholder="Judul pesan" data-i18n="form_subject_placeholder">
                     </div>
                     <div>
-                        <label for="message"
-                            class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300">Pesan</label>
+                        <label for="message" class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300"
+                            data-i18n="form_message">Pesan</label>
                         <textarea id="message" rows="5"
                             class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 transition-all outline-none resize-none dark:bg-slate-900 dark:border-slate-600 dark:text-white dark:focus:ring-blue-500/30"
-                            placeholder="Tulis pesan Anda di sini..."></textarea>
+                            placeholder="Tulis pesan Anda di sini..." data-i18n="form_message_placeholder"></textarea>
                     </div>
                     <button type="submit"
-                        class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                        class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300"
+                        data-i18n="form_btn">
                         Kirim Pesan
                     </button>
                     </form>
@@ -1524,7 +1624,7 @@
     <!-- Footer -->
     <footer class="py-8 bg-slate-900 text-slate-400 border-t border-slate-800">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2026 Ronaldo Eka Putra Wabang. All rights reserved.</p>
+            <p data-i18n="footer_rights">&copy; 2026 Ronaldo Eka Putra Wabang. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1549,7 +1649,7 @@
                         d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                 </svg>
             </div>
-            <span class="text-[10px] font-medium transition-colors">Home</span>
+            <span class="text-[10px] font-medium transition-colors" data-i18n="nav_home">Home</span>
         </a>
         <a href="#projects" class="nav-link flex flex-col items-center gap-1 group w-16" data-target="projects">
             <div class="icon-container p-2 rounded-xl transition-all duration-300 relative">
@@ -1568,7 +1668,7 @@
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <span class="text-[10px] font-medium transition-colors">Projects</span>
+            <span class="text-[10px] font-medium transition-colors" data-i18n="nav_projects">Projects</span>
         </a>
         <a href="#experience" class="nav-link flex flex-col items-center gap-1 group w-16" data-target="experience">
             <div class="icon-container p-2 rounded-xl transition-all duration-300 relative">
@@ -1588,7 +1688,7 @@
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <span class="text-[10px] font-medium transition-colors">Experience</span>
+            <span class="text-[10px] font-medium transition-colors" data-i18n="nav_experience">Experience</span>
         </a>
         <a href="#about" class="nav-link flex flex-col items-center gap-1 group w-16" data-target="about">
             <div class="icon-container p-2 rounded-xl transition-all duration-300 relative">
@@ -1607,7 +1707,7 @@
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <span class="text-[10px] font-medium transition-colors">About</span>
+            <span class="text-[10px] font-medium transition-colors" data-i18n="nav_about">About</span>
         </a>
         <a href="#contact" class="nav-link flex flex-col items-center gap-1 group w-16" data-target="contact">
             <div class="icon-container p-2 rounded-xl transition-all duration-300 relative">
@@ -1627,7 +1727,7 @@
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <span class="text-[10px] font-medium transition-colors">Contact</span>
+            <span class="text-[10px] font-medium transition-colors" data-i18n="nav_contact">Contact</span>
         </a>
     </nav>
 </body>
